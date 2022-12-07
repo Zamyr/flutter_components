@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_components/models/menu_option.dart';
 import 'package:flutter_components/router/app_routes.dart';
 import 'package:flutter_components/screens/listview1_screen.dart';
+import 'package:flutter_components/theme/app_theme.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -14,12 +15,11 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Componentes en Flutter'),
-        elevation: 3,
       ),
       body: ListView.separated(
         itemBuilder: (context, index) => ListTile(
           title: Text(menuOptions[index].name),
-          leading: Icon(menuOptions[index].icon),
+          leading: Icon(menuOptions[index].icon, color: AppTheme.primary),
           onTap: () {
             //final route = MaterialPageRoute(builder: (context) => const Listview1Screen());
             //Navigator.push(context, route); //pushReplacement reemplaza el route, sirve para no volver atras

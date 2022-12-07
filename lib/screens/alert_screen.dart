@@ -9,7 +9,6 @@ class AlertScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Componentes en Flutter'),
-        elevation: 3,
       ),
       body: const Center(
          child: Text('AlertScreen'),
